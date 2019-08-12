@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "main.css",
+  "sources": [
+    "../src/PageA.svelte",
+    "../src/PageB.svelte",
+    "../src/Error.svelte"
+  ],
+  "sourcesContent": [
+    "<div>\n<h1 align='center'>Page A</h1>\n</div>\n\n<style>\n div {\n   background-color: lightblue;\n   width: 100%;\n   height: 100%;\n   margin: 4px;\n }\n</style>\n",
+    "<div>\n<h1 align='center'>Page B</h1>\n</div>\n\n<style>\n div {\n   background-color: lightgreen;\n   width: 100%;\n   height: 100%;\n   margin: 4px;\n }\n</style>\n",
+    "<div>\n<h1 align='center'>Error</h1>\n</div>\n\n<style>\n div {\n   background-color: lightgray;\n   width: 100%;\n   height: 100%;\n   margin: 4px;\n }\n</style>\n"
+  ],
+  "names": [],
+  "mappings": "AAKC,GAAG,cAAC,CAAC,AACH,gBAAgB,CAAE,SAAS,CAC3B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,GAAG,AACb,CAAC;ACLD,GAAG,eAAC,CAAC,AACH,gBAAgB,CAAE,UAAU,CAC5B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,GAAG,AACb,CAAC;ACLD,GAAG,cAAC,CAAC,AACH,gBAAgB,CAAE,SAAS,CAC3B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,GAAG,AACb,CAAC"
+}
