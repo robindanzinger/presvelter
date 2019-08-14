@@ -13,10 +13,6 @@ app.get('/presentation/:topic/:slide', function (req, res) {
         <link rel='stylesheet' href='/bundle.css'>
       </head>
       <style>
-        html, body {
-          height: 100%;
-          margin: 0px;
-        }
       </style>
       <body>
         <script src='/bundle.js'></script>
@@ -34,10 +30,6 @@ app.get('/administration/:topic/:slide', function (req, res) {
         <link rel='stylesheet' href='/adminbundle.css'>
       </head>
       <style>
-        html, body {
-          height: 100%;
-          margin: 0px;
-        }
       </style>
       <body>
         <script src='/adminbundle.js'></script> 

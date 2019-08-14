@@ -84,11 +84,12 @@ function updateView (transition) {
   navigateTo(currentTopicIndex, currentSlideIndex, transition)
 }
 </script>
+<div class='black' />
 <div>
-<button disabled={leftdisabled} id='left' on:click={left}>&lt;</button>
-<button disabled={updisabled} id='up' on:click={up}>&and;</button>
-<button disabled={rightdisabled} id='right' on:click={right}>&gt;</button>
-<button disabled={downdisabled} id='down' on:click={down}>&or;</button>
+<a class='{ leftdisabled ? "disabled" : "" } left' id='left' on:click={left}>&lt;</a>
+<a class='{ updisabled ? "disabled" : "" } up' id='up' on:click={up}>&and;</a>
+<a class='{ rightdisabled ? "disabled" : "" } right' id='right' on:click={right}>&gt;</a>
+<a class='{ downdisabled ? "disabled" : "" } down' id='down' on:click={down}>&or;</a>
 </div>
 
 <svelte:window on:keydown={handleKeyDown} on:keyup={handleKeyUp} />
@@ -99,5 +100,56 @@ function updateView (transition) {
     bottom: 20px;
     right: 20px;
     z-index: 5;
+    width: 80px;
+    height: 80px;
   }
+  a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30%;
+    cursor: pointer;
+    position: absolute;
+    padding: 8px;
+    }
+  a:hover {
+    background-color: black;
+  }
+  a.disabled {
+    cursor: default;
+    color: gray;
+  }
+  .disabled:hover {
+    background-color: inherit;
+  }
+  .up {
+    top: 0;
+    left: 32%;
+  }
+  .left {
+    left: 0;
+    top: 25%;
+    font-size:20px;
+  }
+  .right {
+    right: 0;
+    top: 25%;
+    font-size:20px;
+  }
+  .down {
+    bottom :0;
+    left: 32%;
+  }
+  .black {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    background-color: black;
+    opacity: 0.3;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+ }
+
 </style>

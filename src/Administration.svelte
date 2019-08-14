@@ -1,5 +1,6 @@
 <script>
   import Navigator from './Navigator.svelte'
+  import { fade } from 'svelte/transition'
   import Switch from './components/Switch.svelte'
   import { onRender, getPageMap, syncMode } from './navigate'
 
@@ -43,7 +44,7 @@
 
   const topics = getPageMap()
 </script>
-
+<h1>Cockpit</h1>
 <ul>
   {#each topics as slides}
    <li>
@@ -67,7 +68,7 @@
 </div>
 
 {#if showTimer}
-<div class="timerpanel">
+<div class="timerpanel" transition:fade>
   <div class="buttonpanel">
     <button on:click={handleStart}>start</button>
     <button on:click={handleStop}>stop</button>
