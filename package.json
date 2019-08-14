@@ -8,7 +8,7 @@
     "test": "mocha",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
-    "dev": "nodemon -x 'npm test' & npm run autobuild & nodemon server.js"
+    "dev": "nodemon -x 'npm test' & npm run autobuild & node server.js"
   },
   "keywords": [
     "presenter",

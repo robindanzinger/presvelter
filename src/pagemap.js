@@ -2,10 +2,12 @@ import { writable } from 'svelte/store'
 import PageA from './pages/PageA.svelte'
 import PageB from './pages/PageB.svelte'
 import PageC from './pages/PageC.svelte'
+import Layout from './pages/Layout.svelte'
 import Error from './Error.svelte'
 
-const pagemap = [['page_a', 'page_b'], ['page_b', 'page_c', 'page_a'], ['page_c', 'page_a', 'page_c']]
+const pagemap = [['layout'], ['page_a', 'page_b'], ['page_b', 'page_c', 'page_a'], ['page_c', 'page_a', 'page_c']]
 const pages = {
+  layout: Layout,
   page_a: PageA,
   page_b: PageB,
   page_c: PageC,

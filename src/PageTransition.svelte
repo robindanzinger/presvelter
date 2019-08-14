@@ -8,17 +8,23 @@
   let second
  
   let pagetransitions = [] 
+
   onRender(render)
 
+  let interval
+
+  function startInterval () {
+   interval = setInterval(handleTransitions, 250)
+  }
+
   function render (page, transition = 'fadein') {
-    console.log(page, transition)
     pagetransitions.push({page, transition})
+    startInterval()
   }
 
   function handleTransitions () {
     if ( pagetransitions.length > 0 && runningTransitions == 0) {
       const pagetransition = pagetransitions.shift() 
-      runningTransitions = 0
       updateTransition(pagetransition.transition)
       if (visibleFirst) {
         second = pagetransition.page
@@ -27,9 +33,10 @@
       }
       visibleFirst = !visibleFirst
     }
+    if (pagetransitions.length == 0) {
+      clearInterval(interval)
+    }
   }
-
-  setInterval(handleTransitions, 250)
 
 
   const duration = 1000
