@@ -1,8 +1,5 @@
 <script>
-
-
 import { currentSlide, getNumberOfTopics, getNumberOfSlides } from './pagemap'
-
 import { navigateTo } from './navigate'
 
 let leftdisabled = false

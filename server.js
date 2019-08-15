@@ -11,6 +11,7 @@ app.get('/presentation/:topic/:slide', function (req, res) {
     <html>
       <head>
         <link rel='stylesheet' href='/bundle.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       </head>
       <style>
       </style>
@@ -28,6 +29,7 @@ app.get('/administration/:topic/:slide', function (req, res) {
     <html>
       <head>
         <link rel='stylesheet' href='/adminbundle.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       </head>
       <style>
       </style>

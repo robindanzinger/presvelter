@@ -4,7 +4,7 @@
   "description": "playing around with svelte",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint --fix src/**/*",
+    "pretest": "eslint --fix src/ src/**/* ",
     "test": "mocha",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
@@ -22,6 +22,7 @@
     "websocket": "^1.0.29"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "chai": "^4.2.0",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",

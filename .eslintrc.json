@@ -7,20 +7,20 @@
   },
   "extends": [
     "standard"
-    ],
-    "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "rules": {
-      "quotes": ["error", "single"]
-    },
-    "plugins": [
-      "svelte3"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["error", "single"]
+  },
+  "plugins": [
+    "svelte3"
     ],
     "overrides": [
       {

@@ -6,25 +6,25 @@
   let visibleFirst = true
   let first
   let second
- 
-  let pagetransitions = [] 
+
+  const pagetransitions = []
 
   onRender(render)
 
   let interval
 
   function startInterval () {
-   interval = setInterval(handleTransitions, 250)
+    interval = setInterval(handleTransitions, 250)
   }
 
   function render (page, transition = 'fadein') {
-    pagetransitions.push({page, transition})
+    pagetransitions.push({ page, transition })
     startInterval()
   }
 
   function handleTransitions () {
-    if ( pagetransitions.length > 0 && runningTransitions == 0) {
-      const pagetransition = pagetransitions.shift() 
+    if (pagetransitions.length > 0 && runningTransitions === 0) {
+      const pagetransition = pagetransitions.shift()
       updateTransition(pagetransition.transition)
       if (visibleFirst) {
         second = pagetransition.page
@@ -33,11 +33,10 @@
       }
       visibleFirst = !visibleFirst
     }
-    if (pagetransitions.length == 0) {
+    if (pagetransitions.length === 0) {
       clearInterval(interval)
     }
   }
-
 
   const duration = 1000
 

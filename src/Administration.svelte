@@ -63,36 +63,45 @@
   <Switch label="Timer" bind:checked={showTimer}/>
 </div>
 
-<div class="preview">
-<svelte:component this={slide} />
-</div>
-
 {#if showTimer}
-<div class="timerpanel" transition:fade>
-  <div class="buttonpanel">
-    <button on:click={handleStart}>start</button>
-    <button on:click={handleStop}>stop</button>
-    <button on:click={resetTimer}>reset</button>
-  </div>
+  <div class="timerpanel" transition:fade>
+    <div class="buttonpanel">
+      <button class="btn" on:click={handleStart}><i class="fa fa-play-circle fa-lg" /></button>
+      <button class="btn" on:click={handleStop}><i class="fa fa-stop-circle fa-lg"></i></button>
+      <button class="btn" on:click={resetTimer}><i class="fa fa-undo fa-lg"></i></button>
+    </div>
 
-  <div id='elapsed'>
-    <h2>{elapsedTime} Sekunden </h2>
-    <div class="space" />
+    <div id='elapsed'>
+      <h2>{elapsedTime} Sekunden </h2>
+      <div class="space" />
+    </div>
   </div>
-</div>
 {/if}
 
 <Navigator/>
 
+<div class="preview">
+<svelte:component this={slide} />
+</div>
 
 <style>
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+             font-size: 16px;
+    cursor: pointer;
+  }
   .preview {
+    margin-top: 80px;
     height: 100%;
     width: 100%;
     border-style: solid;
     border-width: medium;
     transform: scale(0.4);
     position: fixed;
+    transform-origin: top;
   }
   #elapsed {
    width: 100%;
