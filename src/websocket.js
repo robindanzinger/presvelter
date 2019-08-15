@@ -22,7 +22,6 @@ function init () {
 
       switch (data.type) {
         case 'join':
-
           break
         case 'update':
           connections.forEach(c => {

@@ -16,28 +16,28 @@
   let timerRunning
 
   onRender((page, transition) => {
-   resetTimer()
-   slide = page
+    resetTimer()
+    slide = page
   })
 
-  function handleStop() {
+  function handleStop () {
     if (timerRunning) {
       clearInterval(interval)
       timerRunning = false
     }
   }
 
-  function handleStart() {
+  function handleStart () {
     if (!timerRunning) {
       resetTimer()
       interval = setInterval(() => {
         actualDate = new Date()
-        }, 1000)
+      }, 1000)
       timerRunning = true
     }
   }
 
-  function resetTimer() {
+  function resetTimer () {
     actualDate = new Date()
     startDate = new Date()
   }

@@ -4,7 +4,7 @@
   "description": "playing around with svelte",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint --fix src/ src/**/* ",
+    "pretest": "eslint --fix src/ src/**/* --ext .svelte ",
     "test": "mocha",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
